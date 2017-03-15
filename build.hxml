@@ -1,0 +1,4 @@
+-lua out.lua
+-lib thx.core
+App
+-cp ../nginhx/
