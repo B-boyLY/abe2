@@ -1,13 +1,16 @@
 import Ngx;
 import HttpStatus;
 
-@:expose
-class App {
-    static function content() {
+class  App {
+    var router : Router;
+    public function new(){ router = new Router(); }
+
+    function content() {
         Ngx.say(Ngx.nvar.uri);
-        haxe.web.Dispatch.run(Ngx.nvar.uri, null, new Router());
+        haxe.web.Dispatch.run(Ngx.nvar.uri, null, router);
     }
-    static function access(){
+
+    function access(){
         var k = Math.random();
         if (k > .5){
             untyped Ngx.status = HttpStatus.HTTP_INTERNAL_SERVER_ERROR;
@@ -16,6 +19,10 @@ class App {
         } else {
             return true;
         }
+    }
+    static function __init__(){
+        var G :Dynamic = untyped __lua__("_G");
+        G.app = new App();
     }
 }
 

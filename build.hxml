@@ -1,4 +1,4 @@
--lua out.lua
+-lua app.lua
 -lib thx.core
 App
 -cp ../nginhx/
