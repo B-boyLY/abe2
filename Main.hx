@@ -3,6 +3,7 @@ class Main {
         trace("hello world");
         var a = new App();
         trace(a + " is the value for a");
+        trace('normally, app would be running now');
     }
 }
 

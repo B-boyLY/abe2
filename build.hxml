@@ -1,5 +1,6 @@
 -lua app.lua
 -lib thx.core
-Demo
+-main Main
 -cp ../nginhx/
 -cp src
+-cmd lua app.lua
