@@ -1,6 +1,7 @@
 -lua app.lua
 -lib thx.core
 -main Main
--cp ../nginhx/
 -cp src
--cmd lua app.lua
+-cp ../nginhx
+-cmd mv app.lua ./config/app/
+-D abe2_lua_package_path="config/app"
